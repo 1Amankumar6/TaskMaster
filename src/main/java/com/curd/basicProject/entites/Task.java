@@ -30,9 +30,9 @@ public class Task {
     @Column(nullable = false)
     private Priority priority = Priority.LOW;
 
-//    @ManyToOne
-//    @JoinColumn(name = "user_id", nullable = false)
-//    private User user;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Status status = Status.PENDING; // default
 
     @ManyToOne
     @JoinColumn(name = "user_id", nullable = false)
